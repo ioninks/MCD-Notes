@@ -10,14 +10,20 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    var coreDataManager: CoreDataManager?
+    // MARK: - Properties
+    
+    var coreDataManager =  CoreDataManager(modelName: "Notes")
+    
+    // MARK: - View Life Cycle
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        print(coreDataManager?.managedObjectContext ?? "No Managed Object Context")
     }
-
+    
+    // MARK: - Navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+    }
 
 }
 
