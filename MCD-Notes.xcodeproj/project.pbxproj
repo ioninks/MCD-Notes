@@ -35,6 +35,55 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B59DF78524063A4E002C184B /* Application Delegate */ = {
+			isa = PBXGroup;
+			children = (
+				B5C6C25E2406371100BE0D97 /* AppDelegate.swift */,
+			);
+			path = "Application Delegate";
+			sourceTree = "<group>";
+		};
+		B59DF78624063A5E002C184B /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				B59DF78724063A66002C184B /* Root View Controller */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		B59DF78724063A66002C184B /* Root View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				B5C6C2622406371100BE0D97 /* ViewController.swift */,
+			);
+			path = "Root View Controller";
+			sourceTree = "<group>";
+		};
+		B59DF78824063A7B002C184B /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				B5C6C2642406371100BE0D97 /* Main.storyboard */,
+				B5C6C2692406371300BE0D97 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		B59DF78924063A82002C184B /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				B5C6C2672406371300BE0D97 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		B59DF78A24063A8B002C184B /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				B5C6C26C2406371300BE0D97 /* Info.plist */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		B5C6C2522406371100BE0D97 = {
 			isa = PBXGroup;
 			children = (
@@ -54,12 +103,11 @@
 		B5C6C25D2406371100BE0D97 /* MCD-Notes */ = {
 			isa = PBXGroup;
 			children = (
-				B5C6C25E2406371100BE0D97 /* AppDelegate.swift */,
-				B5C6C2622406371100BE0D97 /* ViewController.swift */,
-				B5C6C2642406371100BE0D97 /* Main.storyboard */,
-				B5C6C2672406371300BE0D97 /* Assets.xcassets */,
-				B5C6C2692406371300BE0D97 /* LaunchScreen.storyboard */,
-				B5C6C26C2406371300BE0D97 /* Info.plist */,
+				B59DF78524063A4E002C184B /* Application Delegate */,
+				B59DF78624063A5E002C184B /* View Controllers */,
+				B59DF78824063A7B002C184B /* Storyboards */,
+				B59DF78924063A82002C184B /* Resources */,
+				B59DF78A24063A8B002C184B /* Supporting Files */,
 			);
 			path = "MCD-Notes";
 			sourceTree = "<group>";
@@ -282,7 +330,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = J246HBQE3Y;
-				INFOPLIST_FILE = "MCD-Notes/Info.plist";
+				INFOPLIST_FILE = "MCD-Notes/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -300,7 +348,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = J246HBQE3Y;
-				INFOPLIST_FILE = "MCD-Notes/Info.plist";
+				INFOPLIST_FILE = "MCD-Notes/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
