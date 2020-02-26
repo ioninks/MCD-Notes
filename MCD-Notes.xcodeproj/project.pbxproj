@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		B59DF78D24063F7B002C184B /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59DF78C24063F7B002C184B /* CoreDataManager.swift */; };
+		B59DF79224064A8C002C184B /* Notes.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B59DF79024064A8C002C184B /* Notes.xcdatamodeld */; };
 		B5C6C25F2406371100BE0D97 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5C6C25E2406371100BE0D97 /* AppDelegate.swift */; };
 		B5C6C2632406371100BE0D97 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5C6C2622406371100BE0D97 /* ViewController.swift */; };
 		B5C6C2662406371100BE0D97 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B5C6C2642406371100BE0D97 /* Main.storyboard */; };
@@ -17,6 +18,7 @@
 
 /* Begin PBXFileReference section */
 		B59DF78C24063F7B002C184B /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		B59DF79124064A8C002C184B /* Notes.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Notes.xcdatamodel; sourceTree = "<group>"; };
 		B5C6C25B2406371100BE0D97 /* MCD-Notes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MCD-Notes.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5C6C25E2406371100BE0D97 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B5C6C2622406371100BE0D97 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -94,6 +96,14 @@
 			path = Managers;
 			sourceTree = "<group>";
 		};
+		B59DF78F24064A1A002C184B /* Core Data */ = {
+			isa = PBXGroup;
+			children = (
+				B59DF79024064A8C002C184B /* Notes.xcdatamodeld */,
+			);
+			path = "Core Data";
+			sourceTree = "<group>";
+		};
 		B5C6C2522406371100BE0D97 = {
 			isa = PBXGroup;
 			children = (
@@ -118,6 +128,7 @@
 				B59DF78824063A7B002C184B /* Storyboards */,
 				B59DF78924063A82002C184B /* Resources */,
 				B59DF78B24063F27002C184B /* Managers */,
+				B59DF78F24064A1A002C184B /* Core Data */,
 				B59DF78A24063A8B002C184B /* Supporting Files */,
 			);
 			path = "MCD-Notes";
@@ -197,6 +208,7 @@
 				B59DF78D24063F7B002C184B /* CoreDataManager.swift in Sources */,
 				B5C6C2632406371100BE0D97 /* ViewController.swift in Sources */,
 				B5C6C25F2406371100BE0D97 /* AppDelegate.swift in Sources */,
+				B59DF79224064A8C002C184B /* Notes.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -394,6 +406,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		B59DF79024064A8C002C184B /* Notes.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				B59DF79124064A8C002C184B /* Notes.xcdatamodel */,
+			);
+			currentVersion = B59DF79124064A8C002C184B /* Notes.xcdatamodel */;
+			path = Notes.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = B5C6C2532406371100BE0D97 /* Project object */;
 }
