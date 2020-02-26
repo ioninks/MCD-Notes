@@ -9,10 +9,13 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    var coreDataManager: CoreDataManager?
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        print(coreDataManager?.managedObjectContext ?? "No Managed Object Context")
     }
 
 
