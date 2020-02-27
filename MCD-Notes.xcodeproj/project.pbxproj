@@ -17,6 +17,7 @@
 		B5C6C2682406371300BE0D97 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B5C6C2672406371300BE0D97 /* Assets.xcassets */; };
 		B5C6C26B2406371300BE0D97 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B5C6C2692406371300BE0D97 /* LaunchScreen.storyboard */; };
 		B5FF73862407AAC500EEFF8F /* NoteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FF73852407AAC500EEFF8F /* NoteTableViewCell.swift */; };
+		B5FF73892407F9BB00EEFF8F /* NoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FF73882407F9BB00EEFF8F /* NoteViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		B5C6C26A2406371300BE0D97 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B5C6C26C2406371300BE0D97 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B5FF73852407AAC500EEFF8F /* NoteTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoteTableViewCell.swift; sourceTree = "<group>"; };
+		B5FF73882407F9BB00EEFF8F /* NoteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoteViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -48,6 +50,7 @@
 		B574212F2406CAA100EA3A98 /* Notes */ = {
 			isa = PBXGroup;
 			children = (
+				B5FF73872407F9BB00EEFF8F /* Note View Controller */,
 				B57421302406CAA100EA3A98 /* Notes View Controller */,
 				B57421322406CAA100EA3A98 /* Add Note View Controller */,
 			);
@@ -175,6 +178,14 @@
 			path = "Table View Cells";
 			sourceTree = "<group>";
 		};
+		B5FF73872407F9BB00EEFF8F /* Note View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				B5FF73882407F9BB00EEFF8F /* NoteViewController.swift */,
+			);
+			path = "Note View Controller";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -246,6 +257,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B5FF73892407F9BB00EEFF8F /* NoteViewController.swift in Sources */,
 				B57421342406CAA100EA3A98 /* NotesViewController.swift in Sources */,
 				B59DF78D24063F7B002C184B /* CoreDataManager.swift in Sources */,
 				B574213C2406CAE200EA3A98 /* UIViewController.swift in Sources */,

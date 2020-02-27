@@ -15,6 +15,7 @@ class NotesViewController: UIViewController {
 
     private enum Segue {
 
+        static let Note = "Note"
         static let AddNote = "AddNote"
 
     }
@@ -24,23 +25,23 @@ class NotesViewController: UIViewController {
     @IBOutlet var notesView: UIView!
     @IBOutlet var messageLabel: UILabel!
     @IBOutlet var tableView: UITableView!
-    
+
+    // MARK: -
+
+    private var coreDataManager = CoreDataManager(modelName: "Notes")
+
+    // MARK: -
+
     private var notes: [Note]? {
         didSet {
             updateView()
         }
     }
-    
+
     private var hasNotes: Bool {
-        guard let notes = notes else {
-            return false
-        }
+        guard let notes = notes else { return false }
         return notes.count > 0
     }
-
-    // MARK: -
-
-    private var coreDataManager = CoreDataManager(modelName: "Notes")
 
     // MARK: -
 
