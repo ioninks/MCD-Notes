@@ -63,8 +63,8 @@ class NotesViewController: UIViewController {
         title = "Notes"
 
         setupView()
-        
         fetchNotes()
+        setupNotificationHandling()
     }
 
     // MARK: - Navigation
@@ -80,6 +80,17 @@ class NotesViewController: UIViewController {
 
             // Configure Destination
             destination.managedObjectContext = coreDataManager.managedObjectContext
+        case Segue.Note:
+            guard let destination = segue.destination as? NoteViewController else {
+                return
+            }
+            guard
+                let indexPath = tableView.indexPathForSelectedRow,
+                let note = notes?[indexPath.row]
+            else {
+                return
+            }
+            destination.note = note
         default:
             break
         }
@@ -139,7 +150,70 @@ class NotesViewController: UIViewController {
             }
         }
     }
-
+    
+    // MARK: -
+    
+    private func setupNotificationHandling() {
+        
+        let notificationsCenter = NotificationCenter.default
+        
+        notificationsCenter.addObserver(
+            self,
+            selector: #selector(managedObjectContextObjectsDidChange(_:)),
+            name: Notification.Name.NSManagedObjectContextObjectsDidChange,
+            object: coreDataManager.managedObjectContext
+        )
+    }
+    
+    // MARK: - Notification Handling
+    
+    @objc private func managedObjectContextObjectsDidChange(
+        _ notification: Notification
+    ) {
+        guard let userInfo = notification.userInfo else {
+            return
+        }
+        
+        // Helpers
+        var notesDidChange = false
+        
+        if let inserts = userInfo[NSInsertedObjectsKey] as? Set<NSManagedObject> {
+            for insert in inserts {
+                if let note = insert as? Note {
+                    notes?.append(note)
+                    notesDidChange = true
+                }
+            }
+        }
+        if let updates = userInfo[NSUpdatedObjectsKey] as? Set<NSManagedObject> {
+            for update in updates {
+                if let _ = update as? Note {
+                    notesDidChange = true
+                }
+            }
+        }
+        if let deletes = userInfo[NSDeletedObjectsKey] as? Set<NSManagedObject> {
+            for delete in deletes {
+                if let note = delete as? Note {
+                    if let index = notes?.firstIndex(of: note) {
+                        notes?.remove(at: index)
+                        notesDidChange = true
+                    }
+                }
+            }
+        }
+        
+        if notesDidChange {
+            // Sort Notes
+            notes?.sort(by: { $0.updatedAt ?? Date() > $1.updatedAt ?? Date() })
+            
+            // Update Table View
+            tableView.reloadData()
+            
+            // Update View
+            updateView()
+        }
+    }
 }
 
 extension NotesViewController: UITableViewDataSource {
