@@ -253,8 +253,18 @@ extension NotesViewController: UITableViewDataSource {
         return cell
     }
 
-    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-        
+    func tableView(
+        _ tableView: UITableView,
+        commit editingStyle: UITableViewCell.EditingStyle,
+        forRowAt indexPath: IndexPath
+    ) {
+        guard editingStyle == .delete else {
+            return
+        }
+        guard let note = notes?[indexPath.row] else {
+            fatalError("Unexpected Index Path")
+        }
+        note.managedObjectContext?.delete(note)
     }
 
 }
