@@ -6,6 +6,7 @@
 //  Copyright © 2020 Konstantin Ionin. All rights reserved.
 //
 
+import UIKit
 import CoreData
 
 final class CoreDataManager {
@@ -80,6 +81,44 @@ final class CoreDataManager {
     
     init(modelName: String) {
         self.modelName = modelName
+        
+        setupNotificationHandling()
+    }
+    
+    private func setupNotificationHandling() {
+                
+        let notificationCenter = NotificationCenter.default
+
+        notificationCenter.addObserver(
+            self,
+            selector: #selector(saveChanges(_:)),
+            name: UIApplication.willTerminateNotification,
+            object: nil
+        )
+        
+        notificationCenter.addObserver(
+            self,
+            selector: #selector(saveChanges(_:)),
+            name: UIApplication.didEnterBackgroundNotification,
+            object: nil
+        )
+    }
+    
+    @objc private func saveChanges(_ notification: Notification) {
+        saveChanges()
+    }
+    
+    private func saveChanges() {
+        
+        guard managedObjectContext.hasChanges else {
+            return
+        }
+        do {
+            try managedObjectContext.save()
+        } catch {
+            print("Unable to Save Managed Object Context")
+            print("\(error), \(error.localizedDescription)")
+        }
     }
 }
 
