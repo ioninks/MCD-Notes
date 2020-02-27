@@ -16,6 +16,7 @@
 		B5C6C25F2406371100BE0D97 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5C6C25E2406371100BE0D97 /* AppDelegate.swift */; };
 		B5C6C2682406371300BE0D97 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B5C6C2672406371300BE0D97 /* Assets.xcassets */; };
 		B5C6C26B2406371300BE0D97 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B5C6C2692406371300BE0D97 /* LaunchScreen.storyboard */; };
+		B5FF73862407AAC500EEFF8F /* NoteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FF73852407AAC500EEFF8F /* NoteTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		B5C6C2672406371300BE0D97 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B5C6C26A2406371300BE0D97 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B5C6C26C2406371300BE0D97 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B5FF73852407AAC500EEFF8F /* NoteTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoteTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +57,7 @@
 		B57421302406CAA100EA3A98 /* Notes View Controller */ = {
 			isa = PBXGroup;
 			children = (
+				B5FF73842407AAC500EEFF8F /* Table View Cells */,
 				B57421312406CAA100EA3A98 /* NotesViewController.swift */,
 			);
 			path = "Notes View Controller";
@@ -164,6 +167,14 @@
 			path = "MCD-Notes";
 			sourceTree = "<group>";
 		};
+		B5FF73842407AAC500EEFF8F /* Table View Cells */ = {
+			isa = PBXGroup;
+			children = (
+				B5FF73852407AAC500EEFF8F /* NoteTableViewCell.swift */,
+			);
+			path = "Table View Cells";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -240,6 +251,7 @@
 				B574213C2406CAE200EA3A98 /* UIViewController.swift in Sources */,
 				B5C6C25F2406371100BE0D97 /* AppDelegate.swift in Sources */,
 				B57421352406CAA100EA3A98 /* AddNoteViewController.swift in Sources */,
+				B5FF73862407AAC500EEFF8F /* NoteTableViewCell.swift in Sources */,
 				B59DF79224064A8C002C184B /* Notes.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

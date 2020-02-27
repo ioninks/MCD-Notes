@@ -61,18 +61,14 @@ final class CoreDataManager {
         let persistentStoreURL = documentsURL.appendingPathComponent(storeName)
         
         do {
-            let options = [
-                NSMigratePersistentStoresAutomaticallyOption: true,
-                NSInferMappingModelAutomaticallyOption: true
-            ]
             try persistentStoreCoordinator.addPersistentStore(
                 ofType: NSSQLiteStoreType,
                 configurationName: nil,
                 at: persistentStoreURL,
-                options: options
+                options: nil
             )
         } catch {
-            fatalError("Unable to Find Persistent Store")
+            fatalError("Unable to Add Persistent Store")
         }
         return persistentStoreCoordinator
     }()
@@ -84,6 +80,14 @@ final class CoreDataManager {
         
         setupNotificationHandling()
     }
+    
+    // MARK: - Notification Handling
+    
+    @objc private func saveChanges(_ notification: Notification) {
+        saveChanges()
+    }
+    
+    // MARK: - Helpers
     
     private func setupNotificationHandling() {
                 
@@ -102,10 +106,6 @@ final class CoreDataManager {
             name: UIApplication.didEnterBackgroundNotification,
             object: nil
         )
-    }
-    
-    @objc private func saveChanges(_ notification: Notification) {
-        saveChanges()
     }
     
     private func saveChanges() {
