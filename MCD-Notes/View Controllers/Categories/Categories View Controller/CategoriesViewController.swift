@@ -24,15 +24,15 @@ class CategoriesViewController: UIViewController {
 
     @IBOutlet var messageLabel: UILabel!
     @IBOutlet var tableView: UITableView!
-
+    
     // MARK: -
-
-    var managedObjectContext: NSManagedObjectContext?
+    
+    var note: Note?
 
     // MARK: -
 
     private lazy var fetchedResultsController: NSFetchedResultsController<Category> = {
-        guard let managedObjectContext = self.managedObjectContext else {
+        guard let managedObjectContext = self.note?.managedObjectContext else {
             fatalError("No Managed Object Context Found")
         }
 
@@ -83,7 +83,7 @@ class CategoriesViewController: UIViewController {
             }
 
             // Configure Destination
-            destination.managedObjectContext = managedObjectContext
+            destination.managedObjectContext = note?.managedObjectContext
         case Segue.Category:
             guard let destination = segue.destination as? CategoryViewController else {
                 return
@@ -212,11 +212,17 @@ extension CategoriesViewController: UITableViewDataSource {
     }
 
     func configure(_ cell: CategoryTableViewCell, at indexPath: IndexPath) {
-        // Fetch Note
+        // Fetch Category
         let category = fetchedResultsController.object(at: indexPath)
 
         // Configure Cell
         cell.nameLabel.text = category.name
+        
+        if note?.category == category {
+            cell.nameLabel.textColor = .bitterSweet
+        } else {
+            cell.nameLabel.textColor = .black
+        }
     }
 
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
@@ -226,7 +232,7 @@ extension CategoriesViewController: UITableViewDataSource {
         let category = fetchedResultsController.object(at: indexPath)
 
         // Delete Category
-        managedObjectContext?.delete(category)
+        note?.managedObjectContext?.delete(category)
     }
 
 }
@@ -235,6 +241,15 @@ extension CategoriesViewController: UITableViewDelegate {
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
+        
+        // Fetch Category
+        let category = fetchedResultsController.object(at: indexPath)
+        
+        // Update Note
+        note?.category = category
+        
+        // Pop View Controller
+        _ = navigationController?.popViewController(animated: true)
     }
 
 }
