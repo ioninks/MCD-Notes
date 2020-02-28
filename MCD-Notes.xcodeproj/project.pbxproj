@@ -13,6 +13,7 @@
 		B55A1EB2240926D1001E45E3 /* CategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B55A1EAE240926D1001E45E3 /* CategoryViewController.swift */; };
 		B55A1EB52409272A001E45E3 /* Categories.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B55A1EB32409272A001E45E3 /* Categories.storyboard */; };
 		B55A1EB724092C4E001E45E3 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B55A1EB624092C4E001E45E3 /* UIColor.swift */; };
+		B55A1EBD24096389001E45E3 /* ColorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B55A1EBC24096389001E45E3 /* ColorViewController.swift */; };
 		B57421342406CAA100EA3A98 /* NotesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B57421312406CAA100EA3A98 /* NotesViewController.swift */; };
 		B57421352406CAA100EA3A98 /* AddNoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B57421332406CAA100EA3A98 /* AddNoteViewController.swift */; };
 		B57421382406CAC200EA3A98 /* Notes.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B57421362406CAC200EA3A98 /* Notes.storyboard */; };
@@ -33,6 +34,7 @@
 		B55A1EAE240926D1001E45E3 /* CategoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryViewController.swift; sourceTree = "<group>"; };
 		B55A1EB42409272A001E45E3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Categories.storyboard; sourceTree = "<group>"; };
 		B55A1EB624092C4E001E45E3 /* UIColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
+		B55A1EBC24096389001E45E3 /* ColorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorViewController.swift; sourceTree = "<group>"; };
 		B57421312406CAA100EA3A98 /* NotesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotesViewController.swift; sourceTree = "<group>"; };
 		B57421332406CAA100EA3A98 /* AddNoteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddNoteViewController.swift; sourceTree = "<group>"; };
 		B57421372406CAC200EA3A98 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Notes.storyboard; sourceTree = "<group>"; };
@@ -89,9 +91,18 @@
 		B55A1EAD240926D1001E45E3 /* Category View Controller */ = {
 			isa = PBXGroup;
 			children = (
+				B55A1EBB24096389001E45E3 /* Color View Controller */,
 				B55A1EAE240926D1001E45E3 /* CategoryViewController.swift */,
 			);
 			path = "Category View Controller";
+			sourceTree = "<group>";
+		};
+		B55A1EBB24096389001E45E3 /* Color View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				B55A1EBC24096389001E45E3 /* ColorViewController.swift */,
+			);
+			path = "Color View Controller";
 			sourceTree = "<group>";
 		};
 		B574212F2406CAA100EA3A98 /* Notes */ = {
@@ -312,6 +323,7 @@
 				B57421342406CAA100EA3A98 /* NotesViewController.swift in Sources */,
 				B55A1EAF240926D1001E45E3 /* CategoriesViewController.swift in Sources */,
 				B59DF78D24063F7B002C184B /* CoreDataManager.swift in Sources */,
+				B55A1EBD24096389001E45E3 /* ColorViewController.swift in Sources */,
 				B55A1EB2240926D1001E45E3 /* CategoryViewController.swift in Sources */,
 				B574213C2406CAE200EA3A98 /* UIViewController.swift in Sources */,
 				B55A1EB0240926D1001E45E3 /* CategoryTableViewCell.swift in Sources */,
