@@ -15,6 +15,11 @@
 		B55A1EB724092C4E001E45E3 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B55A1EB624092C4E001E45E3 /* UIColor.swift */; };
 		B55A1EBD24096389001E45E3 /* ColorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B55A1EBC24096389001E45E3 /* ColorViewController.swift */; };
 		B55A1EC12409693F001E45E3 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = B55A1EC02409693F001E45E3 /* Category.swift */; };
+		B55A1ECC2409937A001E45E3 /* TagViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B55A1EC52409937A001E45E3 /* TagViewController.swift */; };
+		B55A1ECD2409937A001E45E3 /* AddTagViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B55A1EC72409937A001E45E3 /* AddTagViewController.swift */; };
+		B55A1ECE2409937A001E45E3 /* TagTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B55A1ECA2409937A001E45E3 /* TagTableViewCell.swift */; };
+		B55A1ECF2409937A001E45E3 /* TagsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B55A1ECB2409937A001E45E3 /* TagsViewController.swift */; };
+		B55A1ED224099473001E45E3 /* Tags.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B55A1ED024099473001E45E3 /* Tags.storyboard */; };
 		B57421342406CAA100EA3A98 /* NotesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B57421312406CAA100EA3A98 /* NotesViewController.swift */; };
 		B57421352406CAA100EA3A98 /* AddNoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B57421332406CAA100EA3A98 /* AddNoteViewController.swift */; };
 		B57421382406CAC200EA3A98 /* Notes.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B57421362406CAC200EA3A98 /* Notes.storyboard */; };
@@ -38,6 +43,11 @@
 		B55A1EBC24096389001E45E3 /* ColorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorViewController.swift; sourceTree = "<group>"; };
 		B55A1EC02409693F001E45E3 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		B55A1EC224097198001E45E3 /* Notes 2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "Notes 2.xcdatamodel"; sourceTree = "<group>"; };
+		B55A1EC52409937A001E45E3 /* TagViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TagViewController.swift; sourceTree = "<group>"; };
+		B55A1EC72409937A001E45E3 /* AddTagViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddTagViewController.swift; sourceTree = "<group>"; };
+		B55A1ECA2409937A001E45E3 /* TagTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TagTableViewCell.swift; sourceTree = "<group>"; };
+		B55A1ECB2409937A001E45E3 /* TagsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TagsViewController.swift; sourceTree = "<group>"; };
+		B55A1ED124099473001E45E3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Tags.storyboard; sourceTree = "<group>"; };
 		B57421312406CAA100EA3A98 /* NotesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotesViewController.swift; sourceTree = "<group>"; };
 		B57421332406CAA100EA3A98 /* AddNoteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddNoteViewController.swift; sourceTree = "<group>"; };
 		B57421372406CAC200EA3A98 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Notes.storyboard; sourceTree = "<group>"; };
@@ -116,6 +126,49 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		B55A1EC32409937A001E45E3 /* Tags */ = {
+			isa = PBXGroup;
+			children = (
+				B55A1EC42409937A001E45E3 /* Tag View Controller */,
+				B55A1EC62409937A001E45E3 /* Add Tag View Controller */,
+				B55A1EC82409937A001E45E3 /* Tags View Controller */,
+			);
+			path = Tags;
+			sourceTree = "<group>";
+		};
+		B55A1EC42409937A001E45E3 /* Tag View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				B55A1EC52409937A001E45E3 /* TagViewController.swift */,
+			);
+			path = "Tag View Controller";
+			sourceTree = "<group>";
+		};
+		B55A1EC62409937A001E45E3 /* Add Tag View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				B55A1EC72409937A001E45E3 /* AddTagViewController.swift */,
+			);
+			path = "Add Tag View Controller";
+			sourceTree = "<group>";
+		};
+		B55A1EC82409937A001E45E3 /* Tags View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				B55A1EC92409937A001E45E3 /* Table View Cells */,
+				B55A1ECB2409937A001E45E3 /* TagsViewController.swift */,
+			);
+			path = "Tags View Controller";
+			sourceTree = "<group>";
+		};
+		B55A1EC92409937A001E45E3 /* Table View Cells */ = {
+			isa = PBXGroup;
+			children = (
+				B55A1ECA2409937A001E45E3 /* TagTableViewCell.swift */,
+			);
+			path = "Table View Cells";
+			sourceTree = "<group>";
+		};
 		B574212F2406CAA100EA3A98 /* Notes */ = {
 			isa = PBXGroup;
 			children = (
@@ -163,6 +216,7 @@
 		B59DF78624063A5E002C184B /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				B55A1EC32409937A001E45E3 /* Tags */,
 				B55A1EA7240926D1001E45E3 /* Categories */,
 				B574212F2406CAA100EA3A98 /* Notes */,
 			);
@@ -172,6 +226,7 @@
 		B59DF78824063A7B002C184B /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
+				B55A1ED024099473001E45E3 /* Tags.storyboard */,
 				B55A1EB32409272A001E45E3 /* Categories.storyboard */,
 				B57421362406CAC200EA3A98 /* Notes.storyboard */,
 				B5C6C2692406371300BE0D97 /* LaunchScreen.storyboard */,
@@ -318,6 +373,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B57421382406CAC200EA3A98 /* Notes.storyboard in Resources */,
+				B55A1ED224099473001E45E3 /* Tags.storyboard in Resources */,
 				B5C6C26B2406371300BE0D97 /* LaunchScreen.storyboard in Resources */,
 				B55A1EB52409272A001E45E3 /* Categories.storyboard in Resources */,
 				B5C6C2682406371300BE0D97 /* Assets.xcassets in Resources */,
@@ -343,7 +399,11 @@
 				B57421352406CAA100EA3A98 /* AddNoteViewController.swift in Sources */,
 				B55A1EB724092C4E001E45E3 /* UIColor.swift in Sources */,
 				B55A1EC12409693F001E45E3 /* Category.swift in Sources */,
+				B55A1ECD2409937A001E45E3 /* AddTagViewController.swift in Sources */,
 				B5FF73862407AAC500EEFF8F /* NoteTableViewCell.swift in Sources */,
+				B55A1ECE2409937A001E45E3 /* TagTableViewCell.swift in Sources */,
+				B55A1ECC2409937A001E45E3 /* TagViewController.swift in Sources */,
+				B55A1ECF2409937A001E45E3 /* TagsViewController.swift in Sources */,
 				B59DF79224064A8C002C184B /* Notes.xcdatamodeld in Sources */,
 				B55A1EB1240926D1001E45E3 /* AddCategoryViewController.swift in Sources */,
 			);
@@ -358,6 +418,14 @@
 				B55A1EB42409272A001E45E3 /* Base */,
 			);
 			name = Categories.storyboard;
+			sourceTree = "<group>";
+		};
+		B55A1ED024099473001E45E3 /* Tags.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B55A1ED124099473001E45E3 /* Base */,
+			);
+			name = Tags.storyboard;
 			sourceTree = "<group>";
 		};
 		B57421362406CAC200EA3A98 /* Notes.storyboard */ = {

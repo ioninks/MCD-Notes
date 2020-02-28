@@ -119,7 +119,7 @@
                                     <constraint firstAttribute="height" constant="30" id="eFN-Ec-sZk"/>
                                 </constraints>
                                 <connections>
-                                    <outletCollection property="gestureRecognizers" destination="1KV-ih-v37" appends="YES" id="bMS-UY-ko0"/>
+                                    <outletCollection property="gestureRecognizers" destination="bsJ-Vp-T4W" appends="YES" id="XRH-3L-aki"/>
                                 </connections>
                             </view>
                         </subviews>
@@ -133,14 +133,14 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="colorView" destination="z4T-mk-rFh" id="CA1-Ej-iya"/>
+                        <outlet property="colorView" destination="z4T-mk-rFh" id="oQM-Kw-GYM"/>
                         <outlet property="nameTextField" destination="4EG-Wc-Sw7" id="RsX-xx-Ud2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Izz-Xe-MHd" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="1KV-ih-v37">
+                <tapGestureRecognizer id="bsJ-Vp-T4W">
                     <connections>
-                        <segue destination="h8P-27-cnr" kind="show" identifier="Color" id="YXC-fF-kTU"/>
+                        <segue destination="h8P-27-cnr" kind="show" identifier="Color" id="ifO-D2-Poh"/>
                     </connections>
                 </tapGestureRecognizer>
             </objects>

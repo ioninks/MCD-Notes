@@ -15,12 +15,14 @@ class NoteViewController: UIViewController {
 
     private enum Segue {
 
+        static let Tags = "Tags"
         static let Categories = "Categories"
 
     }
 
     // MARK: - Properties
 
+    @IBOutlet var tagsLabel: UILabel!
     @IBOutlet var categoryLabel: UILabel!
     @IBOutlet var titleTextField: UITextField!
     @IBOutlet var contentsTextView: UITextView!
@@ -37,6 +39,7 @@ class NoteViewController: UIViewController {
         title = "Edit Note"
 
         setupView()
+
         setupNotificationHandling()
     }
 
@@ -58,6 +61,13 @@ class NoteViewController: UIViewController {
         guard let identifier = segue.identifier else { return }
 
         switch identifier {
+        case Segue.Tags:
+            guard let destination = segue.destination as? TagsViewController else {
+                return
+            }
+
+            // Configure Destination
+            destination.note = note
         case Segue.Categories:
             guard let destination = segue.destination as? CategoriesViewController else {
                 return
@@ -73,16 +83,21 @@ class NoteViewController: UIViewController {
     // MARK: - View Methods
 
     private func setupView() {
+        setupTagsLabel()
+        setupCategoryLabel()
         setupTitleTextField()
         setupContentsTextView()
     }
-    
-    private func updateCategoryLabel() {
-        // Configure Category Label
-        categoryLabel.text = note?.category?.name ?? "No category"
-    }
 
     // MARK: -
+
+    private func setupTagsLabel() {
+        updateTagsLabel()
+    }
+
+    private func updateTagsLabel() {
+
+    }
 
     private func setupTitleTextField() {
         // Configure Title Text Field
@@ -93,33 +108,35 @@ class NoteViewController: UIViewController {
         // Configure Contents Text View
         contentsTextView.text = note?.contents
     }
-    
-    private func setupNotificationHandling() {
-        
-        let notificationCenter = NotificationCenter.default
-        
-        notificationCenter.addObserver(
-            self,
-            selector: #selector(managedObjectContextObjectsDidChange(_:)),
-            name: Notification.Name.NSManagedObjectContextObjectsDidChange,
-            object: note?.managedObjectContext
-        )
+
+    private func setupCategoryLabel() {
+        updateCategoryLabel()
     }
-    
+
+    private func updateCategoryLabel() {
+        // Configure Category Label
+        categoryLabel.text = note?.category?.name ?? "No Category"
+    }
+
     // MARK: - Notification Handling
-    
-    @objc private func managedObjectContextObjectsDidChange(
-        _ notification: Notification
-    ) {
-        guard let userInfo = notification.userInfo else {
-            return
-        }
-        guard let updates = userInfo[NSUpdatedObjectsKey] as? Set<NSManagedObject> else {
-            return
-        }
-        if (updates.filter { $0 == note }).count > 0 {
+
+    @objc private func managedObjectContextObjectsDidChange(_ notification: Notification) {
+        guard let userInfo = notification.userInfo else { return }
+        guard let updates = userInfo[NSUpdatedObjectsKey] as? Set<NSManagedObject> else { return }
+
+        if (updates.filter { return $0 == note }).count > 0 {
             updateCategoryLabel()
         }
+    }
+
+    // MARK: - Helper Methods
+
+    private func setupNotificationHandling() {
+        let notificationCenter = NotificationCenter.default
+        notificationCenter.addObserver(self,
+                                       selector: #selector(managedObjectContextObjectsDidChange(_:)),
+                                       name: Notification.Name.NSManagedObjectContextObjectsDidChange,
+                                       object: note?.managedObjectContext)
     }
 
 }

@@ -30,7 +30,7 @@ class ColorViewController: UIViewController {
 
     // MARK: -
 
-    var color: UIColor = .white
+    var color: UIColor = .bitterSweet
 
     // MARK: - View Life Cycle
 
