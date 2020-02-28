@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B55A1EAF240926D1001E45E3 /* CategoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B55A1EA9240926D1001E45E3 /* CategoriesViewController.swift */; };
+		B55A1EB0240926D1001E45E3 /* CategoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B55A1EAA240926D1001E45E3 /* CategoryTableViewCell.swift */; };
+		B55A1EB1240926D1001E45E3 /* AddCategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B55A1EAC240926D1001E45E3 /* AddCategoryViewController.swift */; };
+		B55A1EB2240926D1001E45E3 /* CategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B55A1EAE240926D1001E45E3 /* CategoryViewController.swift */; };
+		B55A1EB52409272A001E45E3 /* Categories.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B55A1EB32409272A001E45E3 /* Categories.storyboard */; };
 		B57421342406CAA100EA3A98 /* NotesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B57421312406CAA100EA3A98 /* NotesViewController.swift */; };
 		B57421352406CAA100EA3A98 /* AddNoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B57421332406CAA100EA3A98 /* AddNoteViewController.swift */; };
 		B57421382406CAC200EA3A98 /* Notes.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B57421362406CAC200EA3A98 /* Notes.storyboard */; };
@@ -21,6 +26,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B55A1EA9240926D1001E45E3 /* CategoriesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoriesViewController.swift; sourceTree = "<group>"; };
+		B55A1EAA240926D1001E45E3 /* CategoryTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryTableViewCell.swift; sourceTree = "<group>"; };
+		B55A1EAC240926D1001E45E3 /* AddCategoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddCategoryViewController.swift; sourceTree = "<group>"; };
+		B55A1EAE240926D1001E45E3 /* CategoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryViewController.swift; sourceTree = "<group>"; };
+		B55A1EB42409272A001E45E3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Categories.storyboard; sourceTree = "<group>"; };
 		B57421312406CAA100EA3A98 /* NotesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotesViewController.swift; sourceTree = "<group>"; };
 		B57421332406CAA100EA3A98 /* AddNoteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddNoteViewController.swift; sourceTree = "<group>"; };
 		B57421372406CAC200EA3A98 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Notes.storyboard; sourceTree = "<group>"; };
@@ -47,6 +57,41 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B55A1EA7240926D1001E45E3 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				B55A1EA8240926D1001E45E3 /* Categories View Controller */,
+				B55A1EAB240926D1001E45E3 /* Add Category View Controller */,
+				B55A1EAD240926D1001E45E3 /* Category View Controller */,
+			);
+			path = Categories;
+			sourceTree = "<group>";
+		};
+		B55A1EA8240926D1001E45E3 /* Categories View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				B55A1EA9240926D1001E45E3 /* CategoriesViewController.swift */,
+				B55A1EAA240926D1001E45E3 /* CategoryTableViewCell.swift */,
+			);
+			path = "Categories View Controller";
+			sourceTree = "<group>";
+		};
+		B55A1EAB240926D1001E45E3 /* Add Category View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				B55A1EAC240926D1001E45E3 /* AddCategoryViewController.swift */,
+			);
+			path = "Add Category View Controller";
+			sourceTree = "<group>";
+		};
+		B55A1EAD240926D1001E45E3 /* Category View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				B55A1EAE240926D1001E45E3 /* CategoryViewController.swift */,
+			);
+			path = "Category View Controller";
+			sourceTree = "<group>";
+		};
 		B574212F2406CAA100EA3A98 /* Notes */ = {
 			isa = PBXGroup;
 			children = (
@@ -93,6 +138,7 @@
 		B59DF78624063A5E002C184B /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				B55A1EA7240926D1001E45E3 /* Categories */,
 				B574212F2406CAA100EA3A98 /* Notes */,
 			);
 			path = "View Controllers";
@@ -101,6 +147,7 @@
 		B59DF78824063A7B002C184B /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
+				B55A1EB32409272A001E45E3 /* Categories.storyboard */,
 				B57421362406CAC200EA3A98 /* Notes.storyboard */,
 				B5C6C2692406371300BE0D97 /* LaunchScreen.storyboard */,
 			);
@@ -246,6 +293,7 @@
 			files = (
 				B57421382406CAC200EA3A98 /* Notes.storyboard in Resources */,
 				B5C6C26B2406371300BE0D97 /* LaunchScreen.storyboard in Resources */,
+				B55A1EB52409272A001E45E3 /* Categories.storyboard in Resources */,
 				B5C6C2682406371300BE0D97 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -259,18 +307,30 @@
 			files = (
 				B5FF73892407F9BB00EEFF8F /* NoteViewController.swift in Sources */,
 				B57421342406CAA100EA3A98 /* NotesViewController.swift in Sources */,
+				B55A1EAF240926D1001E45E3 /* CategoriesViewController.swift in Sources */,
 				B59DF78D24063F7B002C184B /* CoreDataManager.swift in Sources */,
+				B55A1EB2240926D1001E45E3 /* CategoryViewController.swift in Sources */,
 				B574213C2406CAE200EA3A98 /* UIViewController.swift in Sources */,
+				B55A1EB0240926D1001E45E3 /* CategoryTableViewCell.swift in Sources */,
 				B5C6C25F2406371100BE0D97 /* AppDelegate.swift in Sources */,
 				B57421352406CAA100EA3A98 /* AddNoteViewController.swift in Sources */,
 				B5FF73862407AAC500EEFF8F /* NoteTableViewCell.swift in Sources */,
 				B59DF79224064A8C002C184B /* Notes.xcdatamodeld in Sources */,
+				B55A1EB1240926D1001E45E3 /* AddCategoryViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		B55A1EB32409272A001E45E3 /* Categories.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B55A1EB42409272A001E45E3 /* Base */,
+			);
+			name = Categories.storyboard;
+			sourceTree = "<group>";
+		};
 		B57421362406CAC200EA3A98 /* Notes.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

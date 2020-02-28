@@ -15,7 +15,9 @@ class AddNoteViewController: UIViewController {
 
     @IBOutlet var titleTextField: UITextField!
     @IBOutlet var contentsTextView: UITextView!
-    
+
+    // MARK: -
+
     var managedObjectContext: NSManagedObjectContext?
 
     // MARK: - View Life Cycle
