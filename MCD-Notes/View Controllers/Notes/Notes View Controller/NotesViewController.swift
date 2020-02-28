@@ -164,6 +164,12 @@ class NotesViewController: UIViewController {
         cell.updatedAtLabel.text = note.updatedAt.map {
             updatedAtDateFormatter.string(from: $0)
         }
+        
+        if let color = note.category?.color {
+            cell.categoryColorView.backgroundColor = color
+        } else {
+            cell.categoryColorView.backgroundColor = .white
+        }
     }
 }
 

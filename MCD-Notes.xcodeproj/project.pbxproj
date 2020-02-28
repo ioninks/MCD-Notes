@@ -14,6 +14,7 @@
 		B55A1EB52409272A001E45E3 /* Categories.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B55A1EB32409272A001E45E3 /* Categories.storyboard */; };
 		B55A1EB724092C4E001E45E3 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B55A1EB624092C4E001E45E3 /* UIColor.swift */; };
 		B55A1EBD24096389001E45E3 /* ColorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B55A1EBC24096389001E45E3 /* ColorViewController.swift */; };
+		B55A1EC12409693F001E45E3 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = B55A1EC02409693F001E45E3 /* Category.swift */; };
 		B57421342406CAA100EA3A98 /* NotesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B57421312406CAA100EA3A98 /* NotesViewController.swift */; };
 		B57421352406CAA100EA3A98 /* AddNoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B57421332406CAA100EA3A98 /* AddNoteViewController.swift */; };
 		B57421382406CAC200EA3A98 /* Notes.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B57421362406CAC200EA3A98 /* Notes.storyboard */; };
@@ -35,6 +36,7 @@
 		B55A1EB42409272A001E45E3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Categories.storyboard; sourceTree = "<group>"; };
 		B55A1EB624092C4E001E45E3 /* UIColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 		B55A1EBC24096389001E45E3 /* ColorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorViewController.swift; sourceTree = "<group>"; };
+		B55A1EC02409693F001E45E3 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		B57421312406CAA100EA3A98 /* NotesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotesViewController.swift; sourceTree = "<group>"; };
 		B57421332406CAA100EA3A98 /* AddNoteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddNoteViewController.swift; sourceTree = "<group>"; };
 		B57421372406CAC200EA3A98 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Notes.storyboard; sourceTree = "<group>"; };
@@ -103,6 +105,14 @@
 				B55A1EBC24096389001E45E3 /* ColorViewController.swift */,
 			);
 			path = "Color View Controller";
+			sourceTree = "<group>";
+		};
+		B55A1EBF24096926001E45E3 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				B55A1EC02409693F001E45E3 /* Category.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		B574212F2406CAA100EA3A98 /* Notes */ = {
@@ -195,6 +205,7 @@
 		B59DF78F24064A1A002C184B /* Core Data */ = {
 			isa = PBXGroup;
 			children = (
+				B55A1EBF24096926001E45E3 /* Extensions */,
 				B59DF79024064A8C002C184B /* Notes.xcdatamodeld */,
 			);
 			path = "Core Data";
@@ -330,6 +341,7 @@
 				B5C6C25F2406371100BE0D97 /* AppDelegate.swift in Sources */,
 				B57421352406CAA100EA3A98 /* AddNoteViewController.swift in Sources */,
 				B55A1EB724092C4E001E45E3 /* UIColor.swift in Sources */,
+				B55A1EC12409693F001E45E3 /* Category.swift in Sources */,
 				B5FF73862407AAC500EEFF8F /* NoteTableViewCell.swift in Sources */,
 				B59DF79224064A8C002C184B /* Notes.xcdatamodeld in Sources */,
 				B55A1EB1240926D1001E45E3 /* AddCategoryViewController.swift in Sources */,
