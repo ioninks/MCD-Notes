@@ -92,6 +92,8 @@ class NotesViewController: UIViewController {
                 self.updateView()
             }
         }
+        
+        setupNotificationHandling()
     }
 
     // MARK: - Navigation
@@ -162,6 +164,38 @@ class NotesViewController: UIViewController {
             try self.fetchedResultsController.performFetch()
         } catch {
             print("Unable to Perform Fetch Request")
+            print("\(error), \(error.localizedDescription)")
+        }
+    }
+    
+    // MARK: - Notification Handling
+    
+    private func setupNotificationHandling() {
+        
+        let notificationCenter = NotificationCenter.default
+
+        notificationCenter.addObserver(
+            self,
+            selector: #selector(saveChanges(_:)),
+            name: UIApplication.willTerminateNotification,
+            object: nil
+        )
+        
+        notificationCenter.addObserver(
+            self,
+            selector: #selector(saveChanges(_:)),
+            name: UIApplication.didEnterBackgroundNotification,
+            object: nil
+        )
+    }
+    
+    // MARK: -
+    
+    @objc private func saveChanges(_ notification: Notification) {
+        do {
+            try persistentContainer.viewContext.save()
+        } catch {
+            print("Unable to Save Changes to Persisent Container's View Context")
             print("\(error), \(error.localizedDescription)")
         }
     }
