@@ -25,10 +25,11 @@ class NotesViewController: UIViewController {
     @IBOutlet var notesView: UIView!
     @IBOutlet var messageLabel: UILabel!
     @IBOutlet var tableView: UITableView!
-
+    @IBOutlet var activityIndicatorView: UIActivityIndicatorView!
+    
     // MARK: -
 
-    private var coreDataManager = CoreDataManager(modelName: "Notes")
+    private var persistentContainer = NSPersistentContainer(name: "Notes")
 
     // MARK: -
 
@@ -44,7 +45,7 @@ class NotesViewController: UIViewController {
         // Create Fetched Results Controller
         let fetchedResultsController = NSFetchedResultsController(
             fetchRequest: fetchRequest,
-            managedObjectContext: self.coreDataManager.mainManagedObjectContext,
+            managedObjectContext: self.persistentContainer.viewContext,
             sectionNameKeyPath: nil,
             cacheName: nil
         )
@@ -80,10 +81,17 @@ class NotesViewController: UIViewController {
         super.viewDidLoad()
 
         title = "Notes"
-
-        setupView()
-        fetchNotes()
-        updateView()
+        
+        persistentContainer.loadPersistentStores { persistentStoreDescription, error in
+            if let error = error {
+                print("Unable to Add Persistent Store")
+                print("\(error), \(error.localizedDescription)")
+            } else {
+                self.setupView()
+                self.fetchNotes()
+                self.updateView()
+            }
+        }
     }
 
     // MARK: - Navigation
@@ -98,7 +106,7 @@ class NotesViewController: UIViewController {
             }
 
             // Configure Destination
-            destination.managedObjectContext = coreDataManager.mainManagedObjectContext
+            destination.managedObjectContext = persistentContainer.viewContext
         case Segue.Note:
             guard let destination = segue.destination as? NoteViewController else {
                 return
@@ -121,6 +129,9 @@ class NotesViewController: UIViewController {
     // MARK: - View Methods
 
     private func setupView() {
+        activityIndicatorView.stopAnimating()
+        notesView.isHidden = false
+        
         setupMessageLabel()
         setupTableView()
     }
@@ -276,7 +287,7 @@ extension NotesViewController: UITableViewDataSource {
         let note = fetchedResultsController.object(at: indexPath)
 
         // Delete Note
-        coreDataManager.mainManagedObjectContext.delete(note)
+        persistentContainer.viewContext.delete(note)
     }
 
 }
