@@ -157,6 +157,8 @@ class NotesViewController: UIViewController {
 
 }
 
+// MARK: - NSFetchedResultsControllerDelegate
+
 extension NotesViewController: NSFetchedResultsControllerDelegate {
 
     func controllerWillChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
@@ -204,6 +206,8 @@ extension NotesViewController: NSFetchedResultsControllerDelegate {
 
 }
 
+// MARK: - UITableViewDataSource
+
 extension NotesViewController: UITableViewDataSource {
 
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -249,6 +253,7 @@ extension NotesViewController: UITableViewDataSource {
         // Configure Cell
         cell.titleLabel.text = note.title
         cell.contentsLabel.text = note.contents
+        cell.tagsLabel.text = note.alphabetizedTagsAsString ?? "No Tags"
         cell.updatedAtLabel.text = note.updatedAt.map {
             updatedAtDateFormatter.string(from: $0)
         }

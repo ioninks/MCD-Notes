@@ -20,6 +20,7 @@
 		B55A1ECE2409937A001E45E3 /* TagTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B55A1ECA2409937A001E45E3 /* TagTableViewCell.swift */; };
 		B55A1ECF2409937A001E45E3 /* TagsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B55A1ECB2409937A001E45E3 /* TagsViewController.swift */; };
 		B55A1ED224099473001E45E3 /* Tags.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B55A1ED024099473001E45E3 /* Tags.storyboard */; };
+		B55A1ED4240A21A8001E45E3 /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = B55A1ED3240A21A8001E45E3 /* Note.swift */; };
 		B57421342406CAA100EA3A98 /* NotesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B57421312406CAA100EA3A98 /* NotesViewController.swift */; };
 		B57421352406CAA100EA3A98 /* AddNoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B57421332406CAA100EA3A98 /* AddNoteViewController.swift */; };
 		B57421382406CAC200EA3A98 /* Notes.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B57421362406CAC200EA3A98 /* Notes.storyboard */; };
@@ -48,6 +49,7 @@
 		B55A1ECA2409937A001E45E3 /* TagTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TagTableViewCell.swift; sourceTree = "<group>"; };
 		B55A1ECB2409937A001E45E3 /* TagsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TagsViewController.swift; sourceTree = "<group>"; };
 		B55A1ED124099473001E45E3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Tags.storyboard; sourceTree = "<group>"; };
+		B55A1ED3240A21A8001E45E3 /* Note.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
 		B57421312406CAA100EA3A98 /* NotesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotesViewController.swift; sourceTree = "<group>"; };
 		B57421332406CAA100EA3A98 /* AddNoteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddNoteViewController.swift; sourceTree = "<group>"; };
 		B57421372406CAC200EA3A98 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Notes.storyboard; sourceTree = "<group>"; };
@@ -122,6 +124,7 @@
 			isa = PBXGroup;
 			children = (
 				B55A1EC02409693F001E45E3 /* Category.swift */,
+				B55A1ED3240A21A8001E45E3 /* Note.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -402,6 +405,7 @@
 				B55A1ECD2409937A001E45E3 /* AddTagViewController.swift in Sources */,
 				B5FF73862407AAC500EEFF8F /* NoteTableViewCell.swift in Sources */,
 				B55A1ECE2409937A001E45E3 /* TagTableViewCell.swift in Sources */,
+				B55A1ED4240A21A8001E45E3 /* Note.swift in Sources */,
 				B55A1ECC2409937A001E45E3 /* TagViewController.swift in Sources */,
 				B55A1ECF2409937A001E45E3 /* TagsViewController.swift in Sources */,
 				B59DF79224064A8C002C184B /* Notes.xcdatamodeld in Sources */,

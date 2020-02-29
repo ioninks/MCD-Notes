@@ -96,7 +96,8 @@ class NoteViewController: UIViewController {
     }
 
     private func updateTagsLabel() {
-
+        // Configure Tags Label
+        tagsLabel.text = note?.alphabetizedTagsAsString ?? "No Tags"
     }
 
     private func setupTitleTextField() {
@@ -125,6 +126,7 @@ class NoteViewController: UIViewController {
         guard let updates = userInfo[NSUpdatedObjectsKey] as? Set<NSManagedObject> else { return }
 
         if (updates.filter { return $0 == note }).count > 0 {
+            updateTagsLabel()
             updateCategoryLabel()
         }
     }
@@ -133,10 +135,12 @@ class NoteViewController: UIViewController {
 
     private func setupNotificationHandling() {
         let notificationCenter = NotificationCenter.default
-        notificationCenter.addObserver(self,
-                                       selector: #selector(managedObjectContextObjectsDidChange(_:)),
-                                       name: Notification.Name.NSManagedObjectContextObjectsDidChange,
-                                       object: note?.managedObjectContext)
+        notificationCenter.addObserver(
+            self,
+            selector: #selector(managedObjectContextObjectsDidChange(_:)),
+            name: Notification.Name.NSManagedObjectContextObjectsDidChange,
+            object: note?.managedObjectContext
+        )
     }
 
 }
